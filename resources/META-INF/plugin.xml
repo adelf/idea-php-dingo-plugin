@@ -1,0 +1,37 @@
+<idea-plugin version="2">
+  <id>ru.adelf.idea.dingo</id>
+  <name>Dingo API plugin</name>
+  <version>0.1</version>
+  <vendor email="adel.faiz@gmail.com" url="http://adelf.ru">Adel Fayzrakhmanov</vendor>
+
+  <description><![CDATA[
+      <h1>Dingo API Plugin</h1><br>
+    <br/>
+    <a href="https://github.com/adelf/idea-php-dingo-plugin/issues">Issues</a>
+    <br/>
+
+      <h2>Features</h2>
+      <ul>
+        <li>Route: Controller completion and goto</li>
+      </ul>
+    ]]></description>
+
+  <change-notes><![CDATA[
+    ]]></change-notes>
+
+  <idea-version since-build="145.0"/>
+
+  <depends>com.jetbrains.php</depends>
+  <depends>com.intellij.modules.platform</depends>
+  <depends>de.espend.idea.laravel</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <completion.contributor language="PHP" implementationClass="ru.adelf.idea.dingo.extension.CompletionContributor"/>
+    <gotoDeclarationHandler implementation="ru.adelf.idea.dingo.extension.GotoHandler"/>
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
