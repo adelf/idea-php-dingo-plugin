@@ -1,16 +1,13 @@
 package ru.adelf.idea.dingo.conroller.namespace;
 
-import com.intellij.openapi.project.Project;
 import org.apache.commons.lang.StringUtils;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class StandardControllerNamespaceCutter implements ControllerNamespaceCutter {
 
     private String prefix;
 
-    @Override
-    public void init(@NotNull Project project, @Nullable String prefix) {
+    public StandardControllerNamespaceCutter(@Nullable String prefix) {
 
         this.prefix = prefix;
     }
